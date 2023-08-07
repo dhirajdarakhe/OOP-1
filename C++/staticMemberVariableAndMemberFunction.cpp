@@ -24,6 +24,8 @@ public:
 	}
 };
 /*
+
+
     The line below is extremely important for static member variables.
     Without this line an error will occur and we cannot access the value present in rateOfInterest
     Error if the line below is not present: undefined reference to `Account::rateOfInterest'
@@ -62,3 +64,14 @@ int main() {
 
 	cout << Account::getRateOfInterest() << endl;
 }
+/*
+
+In summary:
+
+Declaration introduces an identifier to the compiler, stating its name and type.
+Definition not only declares the identifier but also allocates memory for it and may provide an initial value.
+Initialization is the act of assigning an initial value to a variable at the time of its creation or at a later point.
+
+
+
+*/
