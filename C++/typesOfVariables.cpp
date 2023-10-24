@@ -13,6 +13,20 @@ int main() {
 	    --> To be initialized at declaration only(with some previously created variable and not constant)
 	    --> Contains reference of another variable
 	    --> Reference variables cannot be updated
+
+[
+That's correct. In C++, a reference variable cannot be updated to refer to another variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable, but the reference cannot be changed to refer to another object.
+Here is an example:
+int main() {
+  int x = 5;
+  int& y = x; // y is now a reference to x
+
+  y = 10; // This will change the value of x, because y and x refer to the same object
+
+  int z = 15;
+  y = z; // This will not compile, because y cannot be changed to refer to z
+}
+]
 	    --> Modern style of pointer. It is an internal pointer
 
 
